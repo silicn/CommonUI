@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		97348BBF228284470043DE36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97348BBE228284470043DE36 /* AppDelegate.m */; };
+		97348BC2228284470043DE36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97348BC1228284470043DE36 /* ViewController.m */; };
+		97348BC5228284470043DE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97348BC3228284470043DE36 /* Main.storyboard */; };
+		97348BC7228284490043DE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97348BC6228284490043DE36 /* Assets.xcassets */; };
+		97348BCA228284490043DE36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97348BC8228284490043DE36 /* LaunchScreen.storyboard */; };
+		97348BCD228284490043DE36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97348BCC228284490043DE36 /* main.m */; };
+		97348BD5228284700043DE36 /* QGScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 97348BD4228284700043DE36 /* QGScrollLabel.m */; };
+		97348BD82282968F0043DE36 /* QGCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 97348BD72282968F0043DE36 /* QGCustomTabBar.m */; };
+		97348BDB228298E40043DE36 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97348BDA228298E40043DE36 /* RootViewController.m */; };
+		97348BDE22829CC80043DE36 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97348BDD22829CC80043DE36 /* TestViewController.m */; };
+		97CDB54E22841DD000257F77 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97CDB54D22841DD000257F77 /* ViewController.xib */; };
+		97CDB55222841ECC00257F77 /* MyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CDB55022841ECC00257F77 /* MyViewCell.m */; };
+		97CDB55322841ECC00257F77 /* MyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97CDB55122841ECC00257F77 /* MyViewCell.xib */; };
+		97CDB556228425AF00257F77 /* UITableView+RefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CDB555228425AF00257F77 /* UITableView+RefreshControl.m */; };
+		97CDB6412289527A00257F77 /* QGRefreshNomalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CDB6402289527A00257F77 /* QGRefreshNomalHeader.m */; };
+		97CDB644228956CE00257F77 /* QGRotationCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CDB643228956CE00257F77 /* QGRotationCircleView.m */; };
+		97CDB656228BB1D600257F77 /* UIButton+QGLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CDB655228BB1D600257F77 /* UIButton+QGLoading.m */; };
+		97CDB69622963BFC00257F77 /* QGMarqueeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CDB69522963BFC00257F77 /* QGMarqueeView.m */; };
+		97CDB69D22963D2100257F77 /* UIColor+QGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CDB69B22963D2000257F77 /* UIColor+QGColor.m */; };
+		9FE2696EE3D29E06DEB65E8F /* libPods-QGScrollLabel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5C3D3C7C6244E8211BDADD /* libPods-QGScrollLabel.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7A5C3D3C7C6244E8211BDADD /* libPods-QGScrollLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QGScrollLabel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97348BBA228284470043DE36 /* QGScrollLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QGScrollLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97348BBD228284470043DE36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		97348BBE228284470043DE36 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		97348BC0228284470043DE36 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		97348BC1228284470043DE36 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		97348BC4228284470043DE36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97348BC6228284490043DE36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97348BC9228284490043DE36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		97348BCB228284490043DE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97348BCC228284490043DE36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		97348BD3228284700043DE36 /* QGScrollLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGScrollLabel.h; sourceTree = "<group>"; };
+		97348BD4228284700043DE36 /* QGScrollLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGScrollLabel.m; sourceTree = "<group>"; };
+		97348BD62282968F0043DE36 /* QGCustomTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGCustomTabBar.h; sourceTree = "<group>"; };
+		97348BD72282968F0043DE36 /* QGCustomTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGCustomTabBar.m; sourceTree = "<group>"; };
+		97348BD9228298E40043DE36 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		97348BDA228298E40043DE36 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		97348BDC22829CC80043DE36 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		97348BDD22829CC80043DE36 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		97CDB54D22841DD000257F77 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		97CDB54F22841ECC00257F77 /* MyViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewCell.h; sourceTree = "<group>"; };
+		97CDB55022841ECC00257F77 /* MyViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewCell.m; sourceTree = "<group>"; };
+		97CDB55122841ECC00257F77 /* MyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewCell.xib; sourceTree = "<group>"; };
+		97CDB554228425AF00257F77 /* UITableView+RefreshControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+RefreshControl.h"; sourceTree = "<group>"; };
+		97CDB555228425AF00257F77 /* UITableView+RefreshControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+RefreshControl.m"; sourceTree = "<group>"; };
+		97CDB63F2289527A00257F77 /* QGRefreshNomalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGRefreshNomalHeader.h; sourceTree = "<group>"; };
+		97CDB6402289527A00257F77 /* QGRefreshNomalHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGRefreshNomalHeader.m; sourceTree = "<group>"; };
+		97CDB642228956CE00257F77 /* QGRotationCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGRotationCircleView.h; sourceTree = "<group>"; };
+		97CDB643228956CE00257F77 /* QGRotationCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGRotationCircleView.m; sourceTree = "<group>"; };
+		97CDB654228BB1D600257F77 /* UIButton+QGLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+QGLoading.h"; sourceTree = "<group>"; };
+		97CDB655228BB1D600257F77 /* UIButton+QGLoading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+QGLoading.m"; sourceTree = "<group>"; };
+		97CDB69422963BFB00257F77 /* QGMarqueeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QGMarqueeView.h; sourceTree = "<group>"; };
+		97CDB69522963BFC00257F77 /* QGMarqueeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QGMarqueeView.m; sourceTree = "<group>"; };
+		97CDB69B22963D2000257F77 /* UIColor+QGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+QGColor.m"; sourceTree = "<group>"; };
+		97CDB69C22963D2100257F77 /* UIColor+QGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+QGColor.h"; sourceTree = "<group>"; };
+		B90F16D0D962C18132EE67AC /* Pods-QGScrollLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QGScrollLabel.debug.xcconfig"; path = "Target Support Files/Pods-QGScrollLabel/Pods-QGScrollLabel.debug.xcconfig"; sourceTree = "<group>"; };
+		F262218B91F1B1C4B52692A2 /* Pods-QGScrollLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QGScrollLabel.release.xcconfig"; path = "Target Support Files/Pods-QGScrollLabel/Pods-QGScrollLabel.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97348BB7228284470043DE36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FE2696EE3D29E06DEB65E8F /* libPods-QGScrollLabel.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E9C30F3DBEC0CB6C6C300EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C3D3C7C6244E8211BDADD /* libPods-QGScrollLabel.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97348BB1228284460043DE36 = {
+			isa = PBXGroup;
+			children = (
+				97348BBC228284470043DE36 /* QGScrollLabel */,
+				97348BBB228284470043DE36 /* Products */,
+				CE1F0C96554060FF696BB8A5 /* Pods */,
+				1E9C30F3DBEC0CB6C6C300EE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		97348BBB228284470043DE36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97348BBA228284470043DE36 /* QGScrollLabel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97348BBC228284470043DE36 /* QGScrollLabel */ = {
+			isa = PBXGroup;
+			children = (
+				97348BBD228284470043DE36 /* AppDelegate.h */,
+				97348BBE228284470043DE36 /* AppDelegate.m */,
+				97348BC0228284470043DE36 /* ViewController.h */,
+				97348BC1228284470043DE36 /* ViewController.m */,
+				97CDB54D22841DD000257F77 /* ViewController.xib */,
+				97CDB54F22841ECC00257F77 /* MyViewCell.h */,
+				97CDB55022841ECC00257F77 /* MyViewCell.m */,
+				97CDB55122841ECC00257F77 /* MyViewCell.xib */,
+				97348BDC22829CC80043DE36 /* TestViewController.h */,
+				97348BDD22829CC80043DE36 /* TestViewController.m */,
+				97348BD9228298E40043DE36 /* RootViewController.h */,
+				97348BDA228298E40043DE36 /* RootViewController.m */,
+				97CDB554228425AF00257F77 /* UITableView+RefreshControl.h */,
+				97CDB555228425AF00257F77 /* UITableView+RefreshControl.m */,
+				97CDB654228BB1D600257F77 /* UIButton+QGLoading.h */,
+				97CDB655228BB1D600257F77 /* UIButton+QGLoading.m */,
+				97CDB63F2289527A00257F77 /* QGRefreshNomalHeader.h */,
+				97CDB6402289527A00257F77 /* QGRefreshNomalHeader.m */,
+				97CDB642228956CE00257F77 /* QGRotationCircleView.h */,
+				97CDB643228956CE00257F77 /* QGRotationCircleView.m */,
+				97348BD62282968F0043DE36 /* QGCustomTabBar.h */,
+				97348BD72282968F0043DE36 /* QGCustomTabBar.m */,
+				97348BD3228284700043DE36 /* QGScrollLabel.h */,
+				97348BD4228284700043DE36 /* QGScrollLabel.m */,
+				97CDB69422963BFB00257F77 /* QGMarqueeView.h */,
+				97CDB69522963BFC00257F77 /* QGMarqueeView.m */,
+				97CDB69C22963D2100257F77 /* UIColor+QGColor.h */,
+				97CDB69B22963D2000257F77 /* UIColor+QGColor.m */,
+				97348BC3228284470043DE36 /* Main.storyboard */,
+				97348BC6228284490043DE36 /* Assets.xcassets */,
+				97348BC8228284490043DE36 /* LaunchScreen.storyboard */,
+				97348BCB228284490043DE36 /* Info.plist */,
+				97348BCC228284490043DE36 /* main.m */,
+			);
+			path = QGScrollLabel;
+			sourceTree = "<group>";
+		};
+		CE1F0C96554060FF696BB8A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B90F16D0D962C18132EE67AC /* Pods-QGScrollLabel.debug.xcconfig */,
+				F262218B91F1B1C4B52692A2 /* Pods-QGScrollLabel.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97348BB9228284470043DE36 /* QGScrollLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97348BD0228284490043DE36 /* Build configuration list for PBXNativeTarget "QGScrollLabel" */;
+			buildPhases = (
+				5084891535D8F9CCB2DE8F50 /* [CP] Check Pods Manifest.lock */,
+				97348BB6228284470043DE36 /* Sources */,
+				97348BB7228284470043DE36 /* Frameworks */,
+				97348BB8228284470043DE36 /* Resources */,
+				021EA3F792B3E80E14FDE1E5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QGScrollLabel;
+			productName = QGScrollLabel;
+			productReference = 97348BBA228284470043DE36 /* QGScrollLabel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97348BB2228284460043DE36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Silicn;
+				TargetAttributes = {
+					97348BB9228284470043DE36 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 97348BB5228284460043DE36 /* Build configuration list for PBXProject "QGScrollLabel" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97348BB1228284460043DE36;
+			productRefGroup = 97348BBB228284470043DE36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97348BB9228284470043DE36 /* QGScrollLabel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97348BB8228284470043DE36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97CDB55322841ECC00257F77 /* MyViewCell.xib in Resources */,
+				97348BCA228284490043DE36 /* LaunchScreen.storyboard in Resources */,
+				97348BC7228284490043DE36 /* Assets.xcassets in Resources */,
+				97CDB54E22841DD000257F77 /* ViewController.xib in Resources */,
+				97348BC5228284470043DE36 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		021EA3F792B3E80E14FDE1E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QGScrollLabel/Pods-QGScrollLabel-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QGScrollLabel/Pods-QGScrollLabel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5084891535D8F9CCB2DE8F50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QGScrollLabel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97348BB6228284470043DE36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97CDB55222841ECC00257F77 /* MyViewCell.m in Sources */,
+				97CDB69D22963D2100257F77 /* UIColor+QGColor.m in Sources */,
+				97348BC2228284470043DE36 /* ViewController.m in Sources */,
+				97348BCD228284490043DE36 /* main.m in Sources */,
+				97348BDE22829CC80043DE36 /* TestViewController.m in Sources */,
+				97348BDB228298E40043DE36 /* RootViewController.m in Sources */,
+				97348BD82282968F0043DE36 /* QGCustomTabBar.m in Sources */,
+				97CDB6412289527A00257F77 /* QGRefreshNomalHeader.m in Sources */,
+				97CDB644228956CE00257F77 /* QGRotationCircleView.m in Sources */,
+				97CDB656228BB1D600257F77 /* UIButton+QGLoading.m in Sources */,
+				97CDB556228425AF00257F77 /* UITableView+RefreshControl.m in Sources */,
+				97348BBF228284470043DE36 /* AppDelegate.m in Sources */,
+				97348BD5228284700043DE36 /* QGScrollLabel.m in Sources */,
+				97CDB69622963BFC00257F77 /* QGMarqueeView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		97348BC3228284470043DE36 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97348BC4228284470043DE36 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		97348BC8228284490043DE36 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97348BC9228284490043DE36 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		97348BCE228284490043DE36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		97348BCF228284490043DE36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		97348BD1228284490043DE36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B90F16D0D962C18132EE67AC /* Pods-QGScrollLabel.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = YJD2L6AVTN;
+				INFOPLIST_FILE = QGScrollLabel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.quantgroup.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "develop_*";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		97348BD2228284490043DE36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F262218B91F1B1C4B52692A2 /* Pods-QGScrollLabel.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = YJD2L6AVTN;
+				INFOPLIST_FILE = QGScrollLabel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.quantgroup.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "develop_*";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97348BB5228284460043DE36 /* Build configuration list for PBXProject "QGScrollLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97348BCE228284490043DE36 /* Debug */,
+				97348BCF228284490043DE36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97348BD0228284490043DE36 /* Build configuration list for PBXNativeTarget "QGScrollLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97348BD1228284490043DE36 /* Debug */,
+				97348BD2228284490043DE36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97348BB2228284460043DE36 /* Project object */;
+}
