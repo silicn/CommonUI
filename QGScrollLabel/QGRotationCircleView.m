@@ -37,14 +37,26 @@
         self.mostColor = [self mostColorWith:image];
         [self addSubview:leftIV];
         leftIV.center = center;
+        
+        self.leftIV = leftIV;
     
         UIImageView *rightIV = [[UIImageView alloc]initWithFrame:CGRectMake(frame.size.width/2, 0, 31, 31)];
         rightIV.image = [[UIImage imageNamed:@"circle_down"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [self addSubview:rightIV];
         rightIV.center = center;
         
+        self.rightIV = rightIV;
+        
     }
     return self;
+}
+
+- (void)changeColor:(UIColor *)color
+{
+    UIImage *image = [self.rightIV.image imageWithRenderingMode:(UIImageRenderingModeAlwaysTemplate)];
+    self.rightIV.tintColor = [UIColor blueColor];
+    self.rightIV.image = image;
+    
 }
 
 - (void)prepareDrawComplete

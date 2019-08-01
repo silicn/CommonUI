@@ -72,18 +72,14 @@ typedef int (^EndLoadDataBlock)(void);
  */
 - (void)initRefreshWithHandle:(RefreshBlock)refreshingBlock;
 
-/**
- 开始下拉刷新或者上拉加载更多
- */
-- (void)beginRefresh;
+
 
 /**
  结束下拉刷新或者上拉加载更多
 
  @param refreshBlock 结束下拉刷新之后执行refreshBlock
- @param loadDataBlock 结束上拉加载更多之后执行loadDataBlock
  */
-- (void)endRefreshWithRefreshBlock:(EndRefreshBlock)refreshBlock loadDataBlock:(EndLoadDataBlock)loadDataBlock;
+- (void)endRefreshWithRefreshBlock:(EndRefreshBlock)refreshBlock    count:(NSInteger)count;
 
 
 @end

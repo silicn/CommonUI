@@ -22,6 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)removeCompleteLayer;
 
+
+- (void)changeColor:(UIColor *)color;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46440DBC22BA19420021346A /* SLCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46440DBB22BA19420021346A /* SLCircleView.m */; };
+		465F32CB22EFEB1F00F2ABC4 /* QGDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 465F32CA22EFEB1F00F2ABC4 /* QGDateManager.m */; };
 		97348BBF228284470043DE36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97348BBE228284470043DE36 /* AppDelegate.m */; };
 		97348BC2228284470043DE36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97348BC1228284470043DE36 /* ViewController.m */; };
 		97348BC5228284470043DE36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97348BC3228284470043DE36 /* Main.storyboard */; };
@@ -30,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46440DBA22BA19420021346A /* SLCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLCircleView.h; sourceTree = "<group>"; };
+		46440DBB22BA19420021346A /* SLCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLCircleView.m; sourceTree = "<group>"; };
+		465F32C922EFEB1F00F2ABC4 /* QGDateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QGDateManager.h; sourceTree = "<group>"; };
+		465F32CA22EFEB1F00F2ABC4 /* QGDateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGDateManager.m; sourceTree = "<group>"; };
 		7A5C3D3C7C6244E8211BDADD /* libPods-QGScrollLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QGScrollLabel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97348BBA228284470043DE36 /* QGScrollLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QGScrollLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97348BBD228284470043DE36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,10 +132,14 @@
 				97CDB555228425AF00257F77 /* UITableView+RefreshControl.m */,
 				97CDB654228BB1D600257F77 /* UIButton+QGLoading.h */,
 				97CDB655228BB1D600257F77 /* UIButton+QGLoading.m */,
+				465F32C922EFEB1F00F2ABC4 /* QGDateManager.h */,
+				465F32CA22EFEB1F00F2ABC4 /* QGDateManager.m */,
 				97CDB63F2289527A00257F77 /* QGRefreshNomalHeader.h */,
 				97CDB6402289527A00257F77 /* QGRefreshNomalHeader.m */,
 				97CDB642228956CE00257F77 /* QGRotationCircleView.h */,
 				97CDB643228956CE00257F77 /* QGRotationCircleView.m */,
+				46440DBA22BA19420021346A /* SLCircleView.h */,
+				46440DBB22BA19420021346A /* SLCircleView.m */,
 				97348BD62282968F0043DE36 /* QGCustomTabBar.h */,
 				97348BD72282968F0043DE36 /* QGCustomTabBar.m */,
 				97348BD3228284700043DE36 /* QGScrollLabel.h */,
@@ -277,11 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46440DBC22BA19420021346A /* SLCircleView.m in Sources */,
 				97CDB55222841ECC00257F77 /* MyViewCell.m in Sources */,
 				97CDB69D22963D2100257F77 /* UIColor+QGColor.m in Sources */,
 				97348BC2228284470043DE36 /* ViewController.m in Sources */,
 				97348BCD228284490043DE36 /* main.m in Sources */,
 				97348BDE22829CC80043DE36 /* TestViewController.m in Sources */,
+				465F32CB22EFEB1F00F2ABC4 /* QGDateManager.m in Sources */,
 				97348BDB228298E40043DE36 /* RootViewController.m in Sources */,
 				97348BD82282968F0043DE36 /* QGCustomTabBar.m in Sources */,
 				97CDB6412289527A00257F77 /* QGRefreshNomalHeader.m in Sources */,

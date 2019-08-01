@@ -72,7 +72,10 @@ static const char *refreshLoadDataBlockKey = "refreshLoadDataBlockKey";
 
 - (void)beginHeaderRefresh
 {
-    if (self.mj_header) {
+    if (self.mj_header.state == MJRefreshStateRefreshing) {
+        if (self.mj_footer.state == MJRefreshStateRefreshing) {
+            [self.mj_footer endRefreshing];
+        }
         [self.mj_header beginRefreshing];
     }
 }
@@ -151,6 +154,7 @@ static const char *refreshLoadDataBlockKey = "refreshLoadDataBlockKey";
 
 - (void)initRefreshWithHandle:(RefreshBlock)refreshingBlock
 {
+    
     if (self.mj_header == nil) {
         QGRefreshNomalHeader *header = [QGRefreshNomalHeader headerWithRefreshingBlock:^{
             if (refreshingBlock) {refreshingBlock(YES);} 
@@ -185,21 +189,18 @@ static const char *refreshLoadDataBlockKey = "refreshLoadDataBlockKey";
     }
 }
 
-- (void)endRefreshWithRefreshBlock:(EndRefreshBlock)refreshBlock loadDataBlock:(EndLoadDataBlock)loadDataBlock
+- (void)endRefreshWithRefreshBlock:(EndRefreshBlock)refreshBlock  count:(NSInteger)count;
 {
     if (self.mj_header.state == MJRefreshStateRefreshing) {
         [self.mj_header endRefreshingWithCompletionBlock:refreshBlock];
     }
     
     if (self.mj_footer.state == MJRefreshStateRefreshing) {
-        if (loadDataBlock) {
-            int count = loadDataBlock();
-            [self.mj_footer endRefreshing];
-            if (self.pageCount > 0 && count >= self.pageCount) {
-                self.pageNum += self.pageCount;
-            }else{
-                [self.mj_footer endRefreshingWithNoMoreData];
-            }
+        [self.mj_footer endRefreshingWithCompletionBlock:refreshBlock];
+        if (self.pageCount  > 0 && count >= self.pageCount) {
+            self.pageNum += 1;
+        }else{
+            [self.mj_footer endRefreshingWithNoMoreData];
         }
     }
     
