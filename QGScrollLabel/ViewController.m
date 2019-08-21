@@ -75,31 +75,140 @@
     circle.center = self.view.center;
     [self.view addSubview:circle];
 
-//   BOOL issa = QGDateManager.shareInstance.isSameDay(NSDate.date, NSDate.date);
-//    QGDateManager.shareInstance.defaultFormatterForTimestamp(<#double timestamp#>)
     dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue = dispatch_queue_create("silicn", 0);
+    dispatch_queue_t queue1 = dispatch_queue_create("silicn", 0);
+    
+    NSLog(@"%@ %@",queue,queue1);
+    
+    dispatch_async(queue, ^{
+        NSLog(@"test queue = %@",[NSThread currentThread]);
+    });
+    
+    dispatch_async(queue1, ^{
+        NSLog(@"test queue1 = %@",[NSThread currentThread]);
+    });
     
     //A耗时操作
   __block  NSInteger number = 0;
     //B网络请求
+//    dispatch_group_enter(group);
+//    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+     NSLog(@"代码执行  1");
+   dispatch_group_enter(group);
+//    dispatch_group_async(group,queue, ^{
+        NSLog(@"queue执行 %@  1 ",[NSThread currentThread]);
+        [self sendRequestWithCompletion:^(id response) {
+            NSLog(@"dispatch_group_complete 1");
+            number += [response integerValue];
+            dispatch_group_leave(group);
+//            dispatch_semaphore_signal(sema);
+        } flag:1];
+//        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//    });
+    
+
+    
+    
+    NSLog(@"代码执行  2");
     dispatch_group_enter(group);
-    [self sendRequestWithCompletion:^(id response) {
-        number += [response integerValue];
-        NSLog(@"dispatch_group_leave 1");
-        dispatch_group_leave(group);
-    } flag:1];
+//    dispatch_group_async(group,queue, ^{
+         NSLog(@"queue执行 %@  2",[NSThread currentThread]);
+        [self sendRequestWithCompletion:^(id response) {
+            NSLog(@"dispatch_group_complete 2");
+            number += [response integerValue];
+                        dispatch_group_leave(group);
+//            dispatch_semaphore_signal(sema);
+        } flag:2];
+//        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//        dispatch_group_enter(group);
+//    });
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+    NSLog(@"代码执行  3");
+    dispatch_group_enter(group);
+//    dispatch_group_async(group,queue, ^{
+         NSLog(@"queue执行 %@  3",[NSThread currentThread]);
+        [self sendRequestWithCompletion:^(id response) {
+            NSLog(@"dispatch_group_complete 3");
+            number += [response integerValue];
+                        dispatch_group_leave(group);
+//            dispatch_semaphore_signal(sema);
+        } flag:3];
+//        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//        dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+//        dispatch_group_enter(group);
+//    });
+    
+    NSLog(@"代码执行  4");
+    dispatch_group_enter(group);
+//    dispatch_group_async(group,queue, ^{
+         NSLog(@"queue执行 %@  4",[NSThread currentThread]);
+        [self sendRequestWithCompletion:^(id response) {
+            NSLog(@"dispatch_group_complete 4");
+            number += [response integerValue];
+                        dispatch_group_leave(group);
+//            dispatch_semaphore_signal(sema);
+        } flag:4];
+//        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//         dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+//    });
+   
+  
+//    dispatch_group_async(group, queue, ^{
+//        NSLog(@"group 触发 %@",[NSThread currentThread]);
+//        [self sendRequestWithCompletion:^(id response) {
+//            number += [response integerValue];
+////            dispatch_group_leave(group);
+//            dispatch_semaphore_signal(sema);
+//        } flag:1];
+//         dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//    });
+
     
     //C网络请求
 
-    dispatch_group_enter(group);
-    [self sendRequestWithCompletion:^(id response) {
-        number += [response integerValue];
-        NSLog(@"dispatch_group_leave 2");
-        dispatch_group_leave(group);
-    } flag:2] ;
+//    dispatch_group_enter(group);
+//    NSLog(@"进入 group  2");
+//    dispatch_group_async(group, queue, ^{
+//        [self sendRequestWithCompletion:^(id response) {
+//            number += [response integerValue];
+//
+//            dispatch_group_leave(group);
+//            dispatch_semaphore_signal(sema);
+//        } flag:2] ;
+//         dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//    });
+//
+//    dispatch_group_enter(group);
+//    NSLog(@"进入 group  3");
+//    dispatch_group_async(group, queue, ^{
+//        [self sendRequestWithCompletion:^(id response) {
+//            number += [response integerValue];
+//
+//            dispatch_group_leave(group);
+//            dispatch_semaphore_signal(sema);
+//        } flag:3] ;
+//         dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//    });
+//
+//
+//    dispatch_group_enter(group);
+//    NSLog(@"进入 group  4");
+//    dispatch_group_async(group, queue, ^{
+//        [self sendRequestWithCompletion:^(id response) {
+//            number += [response integerValue];
+//
+//            dispatch_group_leave(group);
+//            dispatch_semaphore_signal(sema);
+//        } flag:4] ;
+//         dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//    });
+//
+    
+  
     
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-        NSLog(@"%zd", number);
+//        NSLog(@"%zd", number);
     });
     
 //    self.tableView.tableFooterView = [[UIView alloc]init];
@@ -111,17 +220,110 @@
 }
 
 
+- (void)testCondition
+{
+    NSConditionLock *lock = [[NSConditionLock alloc]init];
+    
+    NSMutableArray *products = [NSMutableArray array];
+    NSUInteger pdt_cnt_state_0 = 0;  // 初始条件
+    NSUInteger pdt_cnt_state_1 = 1;  // 当前有数据量是4
+    NSUInteger pdt_cnt_state_2 = 2;  // 当前有数据是12
+    NSUInteger pdt_cnt_state_3 = 3;  // 当前数据是  18
+    
+    
+    
+    
+    // 这里主要是为了自增数据
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        while (1) {
+            [lock lockWhenCondition:pdt_cnt_state_0];
+            NSLog(@"add product -----  ");
+            [products addObject:[[NSObject alloc] init]];
+            [products addObject:[[NSObject alloc] init]];
+            [products addObject:[[NSObject alloc] init]];
+            [products addObject:[[NSObject alloc] init]];
+            NSLog(@"----------   total product,数组总数量 =  %zi",products.count);
+            if (products.count == 4) {
+                // 达到第一个条件,释放条件信号
+                [lock unlockWithCondition:pdt_cnt_state_1];
+            }else if (products.count == 10){
+                // 达到第二个条件,释放条件信号
+                [lock unlockWithCondition:pdt_cnt_state_2];
+            }else if (products.count == 16){
+                // 达到第三个条件,释放条件信号
+                [lock unlockWithCondition:pdt_cnt_state_3];
+            }else{
+                // 释放条件信息, 即继续addObject
+                [lock unlockWithCondition:pdt_cnt_state_0];
+            }
+            
+            sleep(1);
+        }
+    });
+    
+    // 条件一
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        while (1) {
+            
+            [lock lockWhenCondition:pdt_cnt_state_1];
+            NSLog(@"****进入条件一 state_1");
+            // 删除两条数据
+            [products removeObjectAtIndex:0];
+            [products removeObjectAtIndex:0];
+            NSLog(@"state_1  current = %zi",products.count);
+            // 返回继续增加数据
+            [lock unlockWithCondition:pdt_cnt_state_0];
+            sleep(1);
+        }
+    });
+    
+    // 条件二
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        while (1) {
+            
+            [lock lockWhenCondition:pdt_cnt_state_2];
+            NSLog(@"****进入条件二 state_2");
+            // 删除两条数据
+            [products removeObjectAtIndex:0];
+            [products removeObjectAtIndex:0];
+            NSLog(@"state_2  current = %zi",products.count);
+            // 返回继续增加数据
+            [lock unlockWithCondition:pdt_cnt_state_0];
+            sleep(1);
+        }
+    });
+    
+    // 条件三
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        while (1) {
+            
+            [lock lockWhenCondition:pdt_cnt_state_3];
+            NSLog(@"****into state_3");
+            // 删除两条数据
+            [products removeObjectAtIndex:0];
+            [products removeObjectAtIndex:0];
+            NSLog(@"state_3  current = %zi",products.count);
+            // 返回继续增加数据
+            [lock unlockWithCondition:pdt_cnt_state_0];
+            sleep(1);
+        }
+    });
+}
+
+
 - (void)sendRequestWithCompletion:(void (^)(id response))completion flag:(NSInteger)flag {
     //模拟一个网络请求
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_async(queue, ^{
-        for (int i = 0; i< 10 ; i++) {
-            NSLog(@"%ld",flag);
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if (completion) completion(@1111);
-        });
-    });
+    sleep(2);
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_async(queue, ^{
+//         NSLog(@"group 执行 %@  %d",[NSThread currentThread],flag);
+//
+//         if (completion) completion(@1111);
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//             NSLog(@"dispatch_group_complete %ld",flag);
+//        });
+//    });
+
 }
 
 - (void)btnAction:(UIButton *)btn
